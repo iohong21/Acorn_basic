@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step09_Example.html</title>
+	<style>
+		.container {
+			width: 768px;
+			margin: 0 auto;
+		}
+		/* ul 기본 스타일 제거 */
+		nav ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		nav ul li{
+			float: left;
+			width: 190px;
+			border-right: 1px solid gray;
+		}
+		nav > ul > li > a{
+			text-decoration: none;
+			margin-left: 50px;
+		}
+		p{
+			clear: both;
+		}
+		nav > ul{
+			/*border: 1px solid gray;*/
+			overflow: auto;
+		}
+		nav > ul > li > a:hover{
+			text-decoration: underline;
+			background-color: gray;
+			/*color: white;*/
+		}
+		nav > ul > li:first-letter{
+			color: red;
+		}
+
+		#last-li{
+			border-right: 0px;
+		}
+		.container p:first-letter{
+			font-weight: bold;
+			font-size: 30px;
+			color: purple;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>nav 요소 만들기</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Cafe</a></li>
+				<li><a href="#">Game</a></li>
+				<li  id="last-li"><a href="#">Contacts</a></li>
+			</ul>
+		</nav>
+		<br>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur iste veritatis animi vel voluptas, est tempore voluptate fugiat labore doloremque ex beatae, inventore nisi deserunt voluptatum non similique nostrum nesciunt?</p>
+	</div>
+</body>
+</html>

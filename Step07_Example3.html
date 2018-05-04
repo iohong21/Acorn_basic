@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_Example3.html</title>
+	<style>
+		.backdrop{
+			background-color: #000;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.3;
+			/* 
+				display의 기본값은 
+				none 은 안보이게 하기 
+				display : none | block | inline | inline-block;
+			*/
+			display: none;
+		}
+		p{
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<h1>position : fixed 응용</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptatum facere ea velit odio quod asperiores minus, consequatur tempore nobis accusamus id blanditiis. Natus minus, numquam commodi. Eius, voluptatum, possimus.</p>
+	<button id="showBtn">눌러보셈</button>
+	<div class="backdrop"></div>
+	<script>
+		document.querySelector("#showBtn").addEventListener("click", function(){
+			document.querySelector("div.backdrop").style.display = "block";
+		});
+		document.querySelector(".backdrop").addEventListener("click", function(){
+			this.style.display = "none";
+		});
+	</script>
+</body>
+</html>

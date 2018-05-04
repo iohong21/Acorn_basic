@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Example.html</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<h1>display 속성 활용</h1>
+	<button id="hideBtn">숨기기</button>
+	<button id="showBtn">보이기</button>
+	<button id="toggleBtn">토글</button>
+	<br>
+	<img src="images/kim1.png" id="one">
+	<script>
+		document.querySelector("#hideBtn").addEventListener("click", function(){
+				document.querySelector("#one").style.display = "none";
+		});
+		document.querySelector("#showBtn").addEventListener("click", function(){
+			document.querySelector("#one").style.display = "inline";
+		});
+		document.querySelector("#toggleBtn").addEventListener("click", function(){
+			var curr = document.querySelector("#one").style;
+			curr.display = curr.display == "none" ? "inline" : "none";
+		});
+	</script>
+</body>
+</html>

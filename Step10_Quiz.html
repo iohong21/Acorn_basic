@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Quiz.html</title>
+	<style>
+		#two, #three{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#one">one</a></li>
+		<li><a href="#two">two</a></li>
+		<li><a href="#three">three</a></li>
+	</ul>
+	<p id="one">one Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis commodi dicta suscipit, deleniti, voluptas adipisci aliquam, aspernatur laboriosam a quam ut excepturi accusamus cupiditate dolor nihil ducimus reiciendis qui!</p>	
+	<p id="two">two Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis commodi dicta suscipit, deleniti, voluptas adipisci aliquam, aspernatur laboriosam a quam ut excepturi accusamus cupiditate dolor nihil ducimus reiciendis qui!</p>	
+	<p id="three">three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis commodi dicta suscipit, deleniti, voluptas adipisci aliquam, aspernatur laboriosam a quam ut excepturi accusamus cupiditate dolor nihil ducimus reiciendis qui!</p>	
+	<script>
+		// document.querySelector("#two").style.display = "none";
+		// document.querySelector("#three").style.display = "none";
+
+		// var arrLI = document.querySelectorAll("ul>li>a");
+		// arrLI.forEach(function(item, index){
+		// 	item.addEventListener("click", function(){
+		// 		if(index == 0) {
+		// 			document.querySelector("#one").style.display = "block";
+		// 			document.querySelector("#two").style.display = "none";
+		// 			document.querySelector("#three").style.display = "none";
+		// 		} else  if(index == 1) {
+		// 			document.querySelector("#one").style.display = "none";
+		// 			document.querySelector("#two").style.display = "block";
+		// 			document.querySelector("#three").style.display = "none";
+		// 		} else {
+		// 			document.querySelector("#one").style.display = "none";
+		// 			document.querySelector("#two").style.display = "none";
+		// 			document.querySelector("#three").style.display = "block";
+		// 		}
+		// 	});
+		// });
+		var links = document.querySelectorAll("ul>li>a");
+		for(var i=0; i<links.length; i++) {
+			links[i].addEventListener("click", function(){
+				var allP = document.querySelectorAll("p");
+				allP.forEach(function(item){
+					item.style.display = "none";
+				});
+				var sel=this.getAttribute("href");
+				document.querySelector(sel).style.display = "block";
+			});
+		}
+	</script>
+</body>
+</html>

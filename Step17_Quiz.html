@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step17_Quiz.html</title>
+	<style>
+		.wrapper{
+			width: 500px;
+			height: 500px;
+			background-color: yellow;
+			position: relative;
+		}
+		.content{
+			width: 50px;
+			height: 50px;
+			background-color: blue;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -25px;
+			margin-top: -25px;
+		}
+		/* css 를 이용해서 .content div를 상하좌우 정가운데에 위치 시켜보세요 */
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content"></div>
+	</div>
+	<p id="pos"></p>
+	<script>
+		document.querySelector(".content").addEventListener("click", function(event){
+			document.querySelector("#pos").innerText = "X: " + event.offsetX + "  ,  Y: " + event.offsetY;
+		});
+		document.querySelector(".wrapper").addEventListener("click", function(event){
+			document.querySelector("#pos").innerText = "X: " + event.pageX + "  ,  Y: " + event.pageY;
+		});
+	</script>
+</body>
+</html>
